@@ -1,0 +1,23 @@
+@model IEnumerable<GoWeb.Models.Personne>
+
+<h1>Liste des personnes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Téléphone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var personne in Model)
+        {
+            <tr>
+                <td>@personne.Nom</td>
+                <td>@personne.Prenom</td>
+                <td>@personne.Telephone</td>
+            </tr>
+        }
+    </tbody>
+</table>
